@@ -36,15 +36,34 @@ namespace LinkedListPractice
                 objlist.CreateASortedLinkList(i);
 
             }
-            objlist.InsertingItemInSortedLinkList(31);
-            //objlist.PrintList(objlist);
+           // objlist.InsertingItemInSortedLinkList(31);
+            objlist.PrintList(objlist);
             //Console.ReadKey();
 
             //objlist.DeleteFromLinkList(31);
             //Console.WriteLine("\n deleted the given element\n");
             problemsOnLinkList lnklist = new problemsOnLinkList();
-            //lnklist.sortLinkListbyBubble(objlist.head);
-            lnklist.SelectionSort(objlist.head);
+            Console.WriteLine("Please select the following option for sorting");
+            Console.WriteLine("B: Bubble Sort");
+            Console.WriteLine("S: Selection Sort");
+            Console.WriteLine("I: Insertion Sort");
+            string sortoption;
+            sortoption = Console.ReadLine();
+            switch(sortoption)
+            {
+                case "B":
+                    lnklist.sortLinkListbyBubble(objlist.head);
+                    break;
+                case "S":
+                    lnklist.SelectionSort(objlist.head);
+                    break;
+                case "I":
+                    lnklist.insertionSort(objlist.head);
+                    break;
+                default:
+                    Console.WriteLine("Wrong option!");
+                    break;
+            }
             objlist.PrintList(objlist);
             
             Console.ReadKey();
