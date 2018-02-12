@@ -1,0 +1,6 @@
+D:\Mypractice\DSPractice\DSPractice\bin\Debug\DSPractice.exe.config
+D:\Mypractice\DSPractice\DSPractice\bin\Debug\DSPractice.exe
+D:\Mypractice\DSPractice\DSPractice\bin\Debug\DSPractice.pdb
+D:\Mypractice\DSPractice\DSPractice\obj\Debug\DSPractice.csprojResolveAssemblyReference.cache
+D:\Mypractice\DSPractice\DSPractice\obj\Debug\DSPractice.exe
+D:\Mypractice\DSPractice\DSPractice\obj\Debug\DSPractice.pdb

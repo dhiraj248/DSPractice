@@ -1,0 +1,6 @@
+D:\Mypractice\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.exe.config
+D:\Mypractice\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.exe
+D:\Mypractice\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.pdb
+D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.csprojResolveAssemblyReference.cache
+D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.exe
+D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.pdb
