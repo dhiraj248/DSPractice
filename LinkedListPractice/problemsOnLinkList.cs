@@ -87,13 +87,55 @@ namespace LinkedListPractice
             else
             {
                 Node currNode = sortedNode;
-                while(currNode.Next!=null && currNode.Next.data<newNode.data)
+                while (currNode.Next != null && currNode.Next.data < newNode.data)
                 {
                     currNode = currNode.Next;
                 }
                 newNode.Next = currNode.Next;
                 currNode.Next = newNode;
             }
+        }
+
+        //Swap two given nodes without swapping data
+        public void SwapNodes(int x, int y,ref Node head)
+        {
+            Node Xnode, Ynode, PrevX, PrevY;
+            Xnode = Ynode = PrevX = PrevY = null;
+            Xnode = head;
+            while (Xnode != null && Xnode.data != x)
+            {
+                PrevX = Xnode;
+                Xnode = Xnode.Next;
+            }
+            Ynode = head;
+            while (Ynode != null && Ynode.data != y)
+            {
+                PrevY = Ynode;
+                Ynode = Ynode.Next;
+            }
+            if (Xnode == null && Ynode == null)
+            {
+                return;
+            }
+            if (PrevX != null)
+            {
+                PrevX.Next = Ynode;
+            }
+            else
+            {
+                head = Ynode;
+            }
+            if (PrevY != null)
+            {
+                PrevY.Next = Xnode;;
+            }
+            else
+            {
+                head = Xnode;
+            }
+            Node temp = Ynode.Next;
+            Ynode.Next = Xnode.Next;
+            Xnode.Next = temp;
         }
     }
 }

@@ -24,18 +24,18 @@ namespace LinkedListPractice
             objlist.addFromRear(9);
             objlist.addFromRear(7);
             objlist.addFromRear(5);
-            objlist.CreateASortedLinkList(5);
-            objlist.CreateASortedLinkList(15);
-            objlist.CreateASortedLinkList(4);
-            objlist.CreateASortedLinkList(3);
-            objlist.CreateASortedLinkList(12);
-            objlist.CreateASortedLinkList(125);
-            int[] number = { 2, 22, 43, 75, 16, 1, 6 };
-            foreach (int i in number)
-            {
-                objlist.CreateASortedLinkList(i);
+            //objlist.CreateASortedLinkList(5);
+            //objlist.CreateASortedLinkList(15);
+            //objlist.CreateASortedLinkList(4);
+            //objlist.CreateASortedLinkList(3);
+            //objlist.CreateASortedLinkList(12);
+            //objlist.CreateASortedLinkList(125);
+            //int[] number = { 2, 22, 43, 75, 16, 1, 6 };
+            //foreach (int i in number)
+            //{
+            //    objlist.CreateASortedLinkList(i);
 
-            }
+            //}
            // objlist.InsertingItemInSortedLinkList(31);
             objlist.PrintList(objlist);
             //Console.ReadKey();
@@ -43,12 +43,14 @@ namespace LinkedListPractice
             //objlist.DeleteFromLinkList(31);
             //Console.WriteLine("\n deleted the given element\n");
             problemsOnLinkList lnklist = new problemsOnLinkList();
-            Console.WriteLine("Please select the following option for sorting");
+            Console.WriteLine("\n Please select the following option for sorting");
             Console.WriteLine("B: Bubble Sort");
             Console.WriteLine("S: Selection Sort");
             Console.WriteLine("I: Insertion Sort");
+            Console.WriteLine("SW: Swap node without swaping data");
             string sortoption;
             sortoption = Console.ReadLine();
+             
             switch(sortoption)
             {
                 case "B":
@@ -60,12 +62,18 @@ namespace LinkedListPractice
                 case "I":
                     lnklist.insertionSort(objlist.head);
                     break;
+                case "SW":
+                    Console.WriteLine("\n please enter nodes to swap");
+                    int x, y;
+                    Int32.TryParse(Console.ReadLine(), out x);
+                    Int32.TryParse(Console.ReadLine(), out y);
+                    lnklist.SwapNodes(x, y,ref objlist.head);
+                    break;
                 default:
                     Console.WriteLine("Wrong option!");
                     break;
             }
-            objlist.PrintList(objlist);
-            
+            objlist.PrintList(objlist);            
             Console.ReadKey();
         }
     }  
