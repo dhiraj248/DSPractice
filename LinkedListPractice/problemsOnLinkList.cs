@@ -97,7 +97,7 @@ namespace LinkedListPractice
         }
 
         //Swap two given nodes without swapping data
-        public void SwapNodes(int x, int y,ref Node head)
+        public void SwapNodes(int x, int y, ref Node head)
         {
             Node Xnode, Ynode, PrevX, PrevY;
             Xnode = Ynode = PrevX = PrevY = null;
@@ -127,7 +127,7 @@ namespace LinkedListPractice
             }
             if (PrevY != null)
             {
-                PrevY.Next = Xnode;;
+                PrevY.Next = Xnode; ;
             }
             else
             {
@@ -137,5 +137,38 @@ namespace LinkedListPractice
             Ynode.Next = Xnode.Next;
             Xnode.Next = temp;
         }
+        [Obsolete]
+        //this appreoach is not inplace 
+        public void Reverse(ref Node head)
+        {
+            Node newHead, currNode, prevNode;
+            currNode = head;
+            prevNode = null;
+            newHead = null; prevNode = null;
+            while (currNode != null)
+            {
+                if (newHead != null)
+                    prevNode = newHead;
+                newHead = new Node(currNode.data); 
+                newHead.Next = prevNode;
+                currNode = currNode.Next;
+            }
+            head = newHead;
+        }
+        public void Reversenew(ref Node head)
+        {
+            Node currNode, prevNode, nextNode;
+            currNode = head;
+            prevNode = nextNode = null;
+            while(currNode!=null)
+            {
+                nextNode = currNode.Next;
+                currNode.Next = prevNode;
+                prevNode = currNode;
+                currNode = nextNode;
+            }
+            head = prevNode;
+        }
+
     }
 }

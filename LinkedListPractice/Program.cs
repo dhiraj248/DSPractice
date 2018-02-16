@@ -36,7 +36,7 @@ namespace LinkedListPractice
             //    objlist.CreateASortedLinkList(i);
 
             //}
-           // objlist.InsertingItemInSortedLinkList(31);
+            // objlist.InsertingItemInSortedLinkList(31);
             objlist.PrintList(objlist);
             //Console.ReadKey();
 
@@ -48,6 +48,7 @@ namespace LinkedListPractice
             Console.WriteLine("S: Selection Sort");
             Console.WriteLine("I: Insertion Sort");
             Console.WriteLine("SW: Swap node without swaping data");
+            Console.WriteLine("REV: Reverse a link list");
             string sortoption;
             sortoption = Console.ReadLine();
              
@@ -68,6 +69,9 @@ namespace LinkedListPractice
                     Int32.TryParse(Console.ReadLine(), out x);
                     Int32.TryParse(Console.ReadLine(), out y);
                     lnklist.SwapNodes(x, y,ref objlist.head);
+                    break;
+                case "REV":
+                    lnklist.Reversenew(ref objlist.head);
                     break;
                 default:
                     Console.WriteLine("Wrong option!");
