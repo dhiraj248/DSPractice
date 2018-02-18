@@ -170,5 +170,30 @@ namespace LinkedListPractice
             head = prevNode;
         }
 
+        public int GetLength(Node head)
+        {
+            Node currNode = head;
+            int counter = 0;
+            while(currNode!=null)
+            {
+                currNode= currNode.Next;
+                counter++;
+            }
+            return counter;
+        }
+        
+        public int getRecursiveLength(Node head)
+        {
+            if (head == null)
+                return 0;
+            else
+            {
+                return 1 + getRecursiveLength(head.Next);
+            }
+            
+        }
+
+
+
     }
 }

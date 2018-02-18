@@ -44,34 +44,44 @@ namespace LinkedListPractice
             //Console.WriteLine("\n deleted the given element\n");
             problemsOnLinkList lnklist = new problemsOnLinkList();
             Console.WriteLine("\n Please select the following option for sorting");
-            Console.WriteLine("B: Bubble Sort");
-            Console.WriteLine("S: Selection Sort");
-            Console.WriteLine("I: Insertion Sort");
-            Console.WriteLine("SW: Swap node without swaping data");
-            Console.WriteLine("REV: Reverse a link list");
+            Console.WriteLine("1: Bubble Sort");
+            Console.WriteLine("2: Selection Sort");
+            Console.WriteLine("3: Insertion Sort");
+            Console.WriteLine("4: Swap node without swaping data");
+            Console.WriteLine("5: Reverse a link list");
+            Console.WriteLine("6: Iterative length of a link list");
+            Console.WriteLine("7: Recursive length of a linked list");
             string sortoption;
             sortoption = Console.ReadLine();
              
             switch(sortoption)
             {
-                case "B":
+                case "1":
                     lnklist.sortLinkListbyBubble(objlist.head);
                     break;
-                case "S":
+                case "2":
                     lnklist.SelectionSort(objlist.head);
                     break;
-                case "I":
+                case "3":
                     lnklist.insertionSort(objlist.head);
                     break;
-                case "SW":
+                case "4":
                     Console.WriteLine("\n please enter nodes to swap");
                     int x, y;
                     Int32.TryParse(Console.ReadLine(), out x);
                     Int32.TryParse(Console.ReadLine(), out y);
                     lnklist.SwapNodes(x, y,ref objlist.head);
                     break;
-                case "REV":
+                case "5":
                     lnklist.Reversenew(ref objlist.head);
+                    break;
+                case "6":
+                    int l=lnklist.GetLength(objlist.head);
+                    Console.WriteLine("the length of list is {0}", l);
+                    break;
+                case "7":
+                    int ll=lnklist.getRecursiveLength(objlist.head);
+                    Console.WriteLine("the length of list is {0}",ll);
                     break;
                 default:
                     Console.WriteLine("Wrong option!");

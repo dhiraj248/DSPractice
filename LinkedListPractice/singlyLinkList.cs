@@ -9,6 +9,7 @@ namespace LinkedListPractice
     class singlyLinkList
     {
         public Node head;
+        public int length { get; set; }
         public void addNodeFromFront(int data)
         {
             Node new_node = new Node(data);

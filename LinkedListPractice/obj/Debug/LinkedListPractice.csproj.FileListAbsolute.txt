@@ -4,3 +4,9 @@ D:\Mypractice\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.pdb
 D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.csprojResolveAssemblyReference.cache
 D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.exe
 D:\Mypractice\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.pdb
+F:\GitHub\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.exe.config
+F:\GitHub\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.exe
+F:\GitHub\DSPractice\LinkedListPractice\bin\Debug\LinkedListPractice.pdb
+F:\GitHub\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.csprojResolveAssemblyReference.cache
+F:\GitHub\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.exe
+F:\GitHub\DSPractice\LinkedListPractice\obj\Debug\LinkedListPractice.pdb
