@@ -189,11 +189,24 @@ namespace LinkedListPractice
             else
             {
                 return 1 + getRecursiveLength(head.Next);
-            }
-            
+            }            
         }
+        public int GetMidItemInList(Node head)
+        {
+            int midItem = -1;
+            Node currNode, midCheck;
+            midCheck = currNode = head;
 
-
-
+            if (head != null)
+            {
+                while (currNode != null && currNode.Next != null)
+                {
+                    currNode = currNode.Next.Next;
+                    midCheck = midCheck.Next;
+                }
+                midItem = midCheck.data;
+            }
+            return midItem;
+        }
     }
 }

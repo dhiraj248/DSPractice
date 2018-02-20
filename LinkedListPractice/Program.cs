@@ -24,6 +24,7 @@ namespace LinkedListPractice
             objlist.addFromRear(9);
             objlist.addFromRear(7);
             objlist.addFromRear(5);
+            objlist.addFromRear(2345);
             //objlist.CreateASortedLinkList(5);
             //objlist.CreateASortedLinkList(15);
             //objlist.CreateASortedLinkList(4);
@@ -51,6 +52,7 @@ namespace LinkedListPractice
             Console.WriteLine("5: Reverse a link list");
             Console.WriteLine("6: Iterative length of a link list");
             Console.WriteLine("7: Recursive length of a linked list");
+            Console.WriteLine("8: Get the middle item of a linked list");
             string sortoption;
             sortoption = Console.ReadLine();
              
@@ -82,6 +84,10 @@ namespace LinkedListPractice
                 case "7":
                     int ll=lnklist.getRecursiveLength(objlist.head);
                     Console.WriteLine("the length of list is {0}",ll);
+                    break;
+                case "8":
+                    int miditem = lnklist.GetMidItemInList(objlist.head);
+                    Console.WriteLine("the middle item of given list is {0}", miditem);
                     break;
                 default:
                     Console.WriteLine("Wrong option!");
