@@ -1,0 +1,5 @@
+F:\GitHub\DSPractice\GenericProblems\bin\Debug\GenericProblems.exe
+F:\GitHub\DSPractice\GenericProblems\bin\Debug\GenericProblems.pdb
+F:\GitHub\DSPractice\GenericProblems\obj\Debug\GenericProblems.csprojResolveAssemblyReference.cache
+F:\GitHub\DSPractice\GenericProblems\obj\Debug\GenericProblems.exe
+F:\GitHub\DSPractice\GenericProblems\obj\Debug\GenericProblems.pdb

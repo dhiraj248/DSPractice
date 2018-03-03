@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSPractice", "DSPractice\DS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListPractice", "LinkedListPractice\LinkedListPractice.csproj", "{8154105B-B970-4BC8-8E80-E3D913187CBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericProblems", "GenericProblems\GenericProblems.csproj", "{03FB7444-72D3-4660-95BD-C04DA1C13E29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8154105B-B970-4BC8-8E80-E3D913187CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8154105B-B970-4BC8-8E80-E3D913187CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8154105B-B970-4BC8-8E80-E3D913187CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03FB7444-72D3-4660-95BD-C04DA1C13E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FB7444-72D3-4660-95BD-C04DA1C13E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FB7444-72D3-4660-95BD-C04DA1C13E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FB7444-72D3-4660-95BD-C04DA1C13E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -196,7 +196,6 @@ namespace LinkedListPractice
             int midItem = -1;
             Node currNode, midCheck;
             midCheck = currNode = head;
-
             if (head != null)
             {
                 while (currNode != null && currNode.Next != null)
@@ -208,5 +207,6 @@ namespace LinkedListPractice
             }
             return midItem;
         }
+
     }
 }
