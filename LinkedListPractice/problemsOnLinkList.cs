@@ -149,7 +149,7 @@ namespace LinkedListPractice
             {
                 if (newHead != null)
                     prevNode = newHead;
-                newHead = new Node(currNode.data); 
+                newHead = new Node(currNode.data);
                 newHead.Next = prevNode;
                 currNode = currNode.Next;
             }
@@ -160,7 +160,7 @@ namespace LinkedListPractice
             Node currNode, prevNode, nextNode;
             currNode = head;
             prevNode = nextNode = null;
-            while(currNode!=null)
+            while (currNode != null)
             {
                 nextNode = currNode.Next;
                 currNode.Next = prevNode;
@@ -174,14 +174,14 @@ namespace LinkedListPractice
         {
             Node currNode = head;
             int counter = 0;
-            while(currNode!=null)
+            while (currNode != null)
             {
-                currNode= currNode.Next;
+                currNode = currNode.Next;
                 counter++;
             }
             return counter;
         }
-        
+
         public int getRecursiveLength(Node head)
         {
             if (head == null)
@@ -189,7 +189,7 @@ namespace LinkedListPractice
             else
             {
                 return 1 + getRecursiveLength(head.Next);
-            }            
+            }
         }
         public int GetMidItemInList(Node head)
         {
@@ -206,6 +206,95 @@ namespace LinkedListPractice
                 midItem = midCheck.data;
             }
             return midItem;
+        }
+
+        public int GetItemCount(Node head, int givenItem)
+        {
+            Node currNode = null;
+            int itemCount = 0;
+            if (head != null)
+            {
+                currNode = head;
+                while (currNode != null)
+                {
+                    if (currNode.data == givenItem)
+                    {
+                        itemCount++;
+                    }
+                    currNode = currNode.Next;
+                }
+            }
+            return itemCount;
+        }
+        int count = 0;
+        public int GetFrequency(Node head, int givenItem)
+        {
+
+            Node currNode = head;
+            if (currNode == null)
+            {
+                return count;
+            }
+            else
+            {
+                if (currNode.data == givenItem)
+                {
+                    count++;
+                }
+                GetFrequency(currNode.Next, givenItem);
+            }
+            return count;
+        }
+
+        public Node SortedMerge(Node head1, Node head2)
+        {
+            Node Mergedhead = null;
+            Node currNode1, currNode2, currMerged;
+            if (head1 != null && head2 != null)
+            {
+                currNode1 = head1;
+                currNode2 = head2;
+                currMerged = null;
+                while (currNode2 != null)
+                {
+                    if (Mergedhead == null)
+                    {
+                        if (currNode1.data < currNode2.data)
+                        {
+                            currMerged = currNode1;
+                            currNode1 = currNode1.Next;
+                        }
+                        else
+                        {
+                            currMerged = currNode2;
+                            currNode2 = currNode2.Next;
+                        }
+                        Mergedhead = currMerged;
+                    }
+                    else
+                    {
+                        if (currNode1 != null && currNode2 != null)
+                        {
+                            if (currNode1.data < currNode2.data)
+                            {
+                                currMerged.Next = currNode1;
+                                currNode1 = currNode1.Next;
+                            }
+                            else
+                            {
+                                currMerged.Next = currNode2;
+                                currNode2 = currNode2.Next;
+                            }
+                            currMerged = currMerged.Next;
+                        }
+                    }
+                }
+                if(currNode2!=null)
+                {
+                    currMerged.Next = currNode2;
+                }
+            }
+            return Mergedhead;
         }
 
     }

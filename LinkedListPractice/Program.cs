@@ -53,10 +53,12 @@ namespace LinkedListPractice
             Console.WriteLine("6: Iterative length of a link list");
             Console.WriteLine("7: Recursive length of a linked list");
             Console.WriteLine("8: Get the middle item of a linked list");
+            Console.WriteLine("9: Get the count of given item in a linked list");
+            Console.WriteLine("10: Merge two sorted link list.");
             string sortoption;
             sortoption = Console.ReadLine();
-             
-            switch(sortoption)
+
+            switch (sortoption)
             {
                 case "1":
                     lnklist.sortLinkListbyBubble(objlist.head);
@@ -72,29 +74,49 @@ namespace LinkedListPractice
                     int x, y;
                     Int32.TryParse(Console.ReadLine(), out x);
                     Int32.TryParse(Console.ReadLine(), out y);
-                    lnklist.SwapNodes(x, y,ref objlist.head);
+                    lnklist.SwapNodes(x, y, ref objlist.head);
                     break;
                 case "5":
                     lnklist.Reversenew(ref objlist.head);
                     break;
                 case "6":
-                    int l=lnklist.GetLength(objlist.head);
+                    int l = lnklist.GetLength(objlist.head);
                     Console.WriteLine("the length of list is {0}", l);
                     break;
                 case "7":
-                    int ll=lnklist.getRecursiveLength(objlist.head);
-                    Console.WriteLine("the length of list is {0}",ll);
+                    int ll = lnklist.getRecursiveLength(objlist.head);
+                    Console.WriteLine("the length of list is {0}", ll);
                     break;
                 case "8":
                     int miditem = lnklist.GetMidItemInList(objlist.head);
                     Console.WriteLine("the middle item of given list is {0}", miditem);
                     break;
+                case "9":
+                    Console.WriteLine("Please enter the item to look into");
+                    int givenItem = 0;
+                    Int32.TryParse(Console.ReadLine(), out givenItem);
+                    // int itemCount = lnklist.GetItemCount(objlist.head,givenItem);
+                    int itemCount = lnklist.GetFrequency(objlist.head, givenItem);
+                    Console.WriteLine($"the count of  {givenItem} in given list is {itemCount}");
+                    break;
+                case "10":
+                    singlyLinkList l1 = new singlyLinkList();
+                    l1.head = new Node(2);
+                    for (int j = 2; j < 6; j++)
+                        l1.addFromRear(2*j);
+                    singlyLinkList l2 = new singlyLinkList();
+                    l2.head = new Node(5);
+                    for (int k = 7; k < 14; k+=2)
+                        l2.addFromRear(k);
+                    Node h = lnklist.SortedMerge(l1.head, l2.head);
+                    objlist.head = h;
+                    break;
                 default:
                     Console.WriteLine("Wrong option!");
                     break;
             }
-            objlist.PrintList(objlist);            
+            objlist.PrintList(objlist);
             Console.ReadKey();
         }
-    }  
+    }
 }

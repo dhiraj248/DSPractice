@@ -11,8 +11,8 @@ namespace GenericProblems
         public string GetDateAfterDays(int givenDays, string givendate)
         {
             string message = "";
-            int dd, mm, yyyy, newdd, newmm, newyyyy;
-            dd = mm = yyyy = newdd = newmm = newyyyy = 0;
+            int dd, mm, yyyy;
+            dd = mm = yyyy = 0;
             if (givenDays > 0)
             {
                 if (!string.IsNullOrEmpty(givendate))
